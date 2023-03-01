@@ -1,0 +1,25 @@
+To start the application:
+-------------------------
+1. pip install streamlit
+2. pip install streamlit-chat
+3. pip install transformers
+
+
+To run the application:
+-----------------------
+on terminal, in this folder, type: python -m streamlit run table_chat.py --server.maxUploadSize=1024
+
+-> if the file to be loaded is bigger than 1 GB, change it in the maxUploadSize argument.
+
+
+Basic information about the UI:
+------------------------------
+after running the application
+1. in the setup, load the file (in excel format only) and click on the button: 'load the file'.
+2. then in chatbot tab, if you doesn't select the columns, then the whole table will be used.
+3. After the question is typed in, enter is pressed, its necessary to click on the button: 'start search' as well.
+
+
+Note: selecting the columns ensures good performance. When the table is big (I tested on 10 MB file), even on GPU, the model doesn't work. 
+But with 2 columns preselected, I was always able to get a reply from the model.
+
